@@ -58,3 +58,12 @@ fun reto5() {
     println("Invertido: ${invertido.joinToString()}")
 }
 
+fun reto6() {
+    println("\n--- Reto 6: Compatibilidad de Intereses ---")
+    val intereses1 = setOf("fútbol", "cine", "música", "lectura")
+    val intereses2 = setOf("cine", "videojuegos", "música", "natación")
+    val compartidos = intereses1.intersect(intereses2)
+    val exclusivos1 = intereses1.subtract(intereses2)
+    println("Intereses compartidos: $compartidos")
+    println("Exclusivos de persona 1: $exclusivos1")
+}
