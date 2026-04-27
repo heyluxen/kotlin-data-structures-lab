@@ -88,3 +88,13 @@ fun reto7() {
     consumir("sal", 2)
     println("Inventario final: $despensa")
 }
+
+fun reto8() {
+    println("\n--- Reto 8: Cálculo de Promedio Académico ---")
+    val notas = listOf(Pair(4.5, 0.3), Pair(3.8, 0.3), Pair(4.0, 0.4))
+    var definitiva = 0.0
+    for ((nota, porcentaje) in notas) {
+        definitiva += nota * porcentaje
+    }
+    println("Nota final definitiva: ${String.format("%.2f", definitiva)}")
+}
