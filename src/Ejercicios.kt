@@ -98,3 +98,11 @@ fun reto8() {
     }
     println("Nota final definitiva: ${String.format("%.2f", definitiva)}")
 }
+
+fun reto9() {
+    println("\n--- Reto 9: Traductor de Códigos de País ---")
+    val paises = mapOf("CO" to "Colombia", "MX" to "México", "AR" to "Argentina", "ES" to "España")
+    for ((codigo, nombre) in paises) {
+        println("El código $codigo pertenece a $nombre")
+    }
+}

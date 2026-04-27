@@ -12,5 +12,6 @@ fun main() {
     reto6()
     reto7()
     reto8()
+    reto9()
     println("\n========== FIN ==========")
 }
