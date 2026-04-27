@@ -22,3 +22,15 @@ fun reto2() {
     val seniors = empleados.filter { it.second > 30 }.map { it.first.uppercase() }
     println("Empleados senior: $seniors")
 }
+
+fun reto3() {
+    println("\n--- Reto 3: Limpieza de Contactos Duplicados ---")
+    val telefonos = listOf(
+        "3011234567", "3109876543", "3011234567", "3156789012", "3109876543",
+        "3204567890", "3112223344", "3156789012", "3135556677", "3147778899",
+        "3011234567", "3169900112", "3173344556", "3109876543", "3181122334",
+        "3194455667", "3112223344", "3135556677", "3204567890", "3147778899"
+    )
+    val unicos = telefonos.toSet().sorted()
+    println("Números únicos ordenados: $unicos")
+}
