@@ -44,3 +44,17 @@ fun reto4() {
     }
     println("Conteo por producto: $conteo")
 }
+
+fun reto5() {
+    println("\n--- Reto 5: Historial de Navegación Reversible ---")
+    val urls = arrayOf("google.com", "facebook.com", "youtube.com", "github.com", "twitter.com")
+    println("Original: ${urls.joinToString()}")
+
+    val invertido = arrayOfNulls<String>(urls.size)
+    for (i in urls.indices) {
+        invertido[i] = urls[urls.size - 1 - i]
+    }
+
+    println("Invertido: ${invertido.joinToString()}")
+}
+
