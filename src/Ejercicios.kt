@@ -34,3 +34,13 @@ fun reto3() {
     val unicos = telefonos.toSet().sorted()
     println("Números únicos ordenados: $unicos")
 }
+
+fun reto4() {
+    println("\n--- Reto 4: Análisis de Carrito de Compras ---")
+    val productosCarrito = listOf("manzana", "pan", "manzana", "leche", "pan", "pan", "huevos", "huevos")
+    val conteo = mutableMapOf<String, Int>()
+    for (p in productosCarrito) {
+        conteo[p] = conteo.getOrDefault(p, 0) + 1
+    }
+    println("Conteo por producto: $conteo")
+}
