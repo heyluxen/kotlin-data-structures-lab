@@ -124,3 +124,20 @@ fun rotarTurnos(lista: MutableList<String>, k: Int) {
         lista.add(0, ultimo)
     }
 }
+
+fun reto11() {
+    println("\n--- Reto 11: Organizador de Maleta ---")
+    val objetos = listOf("camisa" to 2, "pantalón" to 3, "zapatos" to 2, "chaqueta" to 4, "gorra" to 1)
+    val porPeso = mutableMapOf<Int, MutableList<String>>()
+    for ((obj, peso) in objetos) {
+        porPeso.computeIfAbsent(peso) { mutableListOf() }.add(obj)
+    }
+    println("Objetos agrupados por peso: $porPeso")
+}
+
+fun reto12() {
+    println("\n--- Reto 12: Verificador de Ruta Reversible ---")
+    val ruta = listOf("A", "B", "C", "B", "A")
+    val esReversible = ruta == ruta.reversed()
+    println("Ruta $ruta es reversible: $esReversible")
+}
