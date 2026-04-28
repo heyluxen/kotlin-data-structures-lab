@@ -141,3 +141,11 @@ fun reto12() {
     val esReversible = ruta == ruta.reversed()
     println("Ruta $ruta es reversible: $esReversible")
 }
+
+fun reto13() {
+    println("\n--- Reto 13: Reparto de Pedidos por Camión ---")
+    val paquetes = (1..50).toList()
+    val lotes = paquetes.chunked(10)
+    println("Paquetes repartidos en ${lotes.size} camiones")
+    lotes.forEachIndexed { idx, lote -> println("Camión ${idx + 1}: $lote") }
+}
