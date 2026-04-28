@@ -106,3 +106,21 @@ fun reto9() {
         println("El código $codigo pertenece a $nombre")
     }
 }
+
+fun reto10() {
+    println("\n--- Reto 10: Rotación de Turnos de Trabajo ---")
+    val empleadosTurnos = mutableListOf("Teresa", "Rubi", "Maribel", "Alejandro", "Diego", "Gema", "Pablo")
+    val k = 2
+    println("Turnos original: $empleadosTurnos")
+
+    rotarTurnos(empleadosTurnos, k)
+
+    println("Turnos rotados $k posiciones: $empleadosTurnos")
+}
+
+fun rotarTurnos(lista: MutableList<String>, k: Int) {
+    repeat(k) {
+        val ultimo = lista.removeAt(lista.size - 1)
+        lista.add(0, ultimo)
+    }
+}
