@@ -149,3 +149,20 @@ fun reto13() {
     println("Paquetes repartidos en ${lotes.size} camiones")
     lotes.forEachIndexed { idx, lote -> println("Camión ${idx + 1}: $lote") }
 }
+
+fun reto14() {
+    println("\n--- Reto 14: Identificador de Ticket Único ---")
+    val ids = listOf(101, 202, 101, 303, 404, 202, 505)
+
+    // Contar cuántas veces aparece cada ID
+    val frecuencia = ids.groupingBy { it }.eachCount()
+
+    // Buscar el primer ID que aparece solo una vez
+    val primerIdUnico = ids.find { id -> frecuencia[id] == 1 }
+
+    if (primerIdUnico != null) {
+        println("El primer ID de error no reportado por otros usuarios es: $primerIdUnico")
+    } else {
+        println("No hay IDs únicos en la lista")
+    }
+}
