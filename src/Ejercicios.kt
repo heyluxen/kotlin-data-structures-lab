@@ -367,3 +367,12 @@ fun reto26() {
     comprimido.add(logs.last() to contador)
     println("Logs comprimidos: $comprimido")
 }
+
+fun reto27() {
+    println("\n--- Reto 27: Premios a Vendedores ---")
+    val ventas = mapOf("Ana" to 5000.0, "Luis" to 7000.0, "Carlos" to 6500.0, "Sofia" to 4800.0)
+    val promedioVentas = ventas.values.average()
+    val ganadores = ventas.filter { it.value > promedioVentas }.keys
+    println("Promedio equipo: $$promedioVentas")
+    println("Vendedores con bono: $ganadores")
+}
