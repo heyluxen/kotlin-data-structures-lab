@@ -294,3 +294,19 @@ fun reto22() {
     println("Lavar: ${pop()}")
     println("Pila restante: $pilaPlatos")
 }
+
+fun reto23() {
+    println("\n--- Reto 23: Seguimiento de Dieta ---")
+    val calorias = listOf(2000, 2100, 1950, 2200, 2050)
+    val diferencias = mutableListOf<Double>()
+    for (i in calorias.indices) {
+        if (i == 0) {
+            diferencias.add(0.0)
+        } else {
+            val promedioAnterior = calorias.subList(0, i).average()
+            diferencias.add(calorias[i] - promedioAnterior)
+        }
+    }
+    println("Calorías: $calorias")
+    println("Diferencia con promedio anterior: $diferencias")
+}
