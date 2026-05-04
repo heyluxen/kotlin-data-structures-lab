@@ -206,3 +206,13 @@ fun reto17() {
     println("Diagonal principal: $diagonalPrincipal")
     println("Diagonal secundaria: $diagonalSecundaria")
 }
+
+fun reto18() {
+    println("\n--- Reto 18: Fusión de Recetas ---")
+    val chef1 = mapOf("harina" to 500.0, "huevos" to 6.0, "azúcar" to 200.0)
+    val chef2 = mapOf("huevos" to 4.0, "leche" to 300.0, "mantequilla" to 100.0)
+    val fusion = mutableMapOf<String, Double>()
+    for ((ing, cant) in chef1) fusion[ing] = fusion.getOrDefault(ing, 0.0) + cant
+    for ((ing, cant) in chef2) fusion[ing] = fusion.getOrDefault(ing, 0.0) + cant
+    println("Lista de compras combinada: $fusion")
+}
