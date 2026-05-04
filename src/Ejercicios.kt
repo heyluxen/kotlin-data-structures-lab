@@ -281,3 +281,16 @@ fun reto21() {
 
     println("Pisos con mantenimiento especial (primos): ${arrayFinal.joinToString()}")
 }
+
+fun reto22() {
+    println("\n--- Reto 22: Pila de Platos Sucios ---")
+    val pilaPlatos = mutableListOf<String>()
+    fun push(plato: String) { pilaPlatos.add(plato) }
+    fun pop(): String? { return if (pilaPlatos.isNotEmpty()) pilaPlatos.removeAt(pilaPlatos.size - 1) else null }
+    push("Plato1")
+    push("Plato2")
+    push("Plato3")
+    println("Pila: $pilaPlatos")
+    println("Lavar: ${pop()}")
+    println("Pila restante: $pilaPlatos")
+}
