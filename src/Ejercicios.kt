@@ -376,3 +376,11 @@ fun reto27() {
     println("Promedio equipo: $$promedioVentas")
     println("Vendedores con bono: $ganadores")
 }
+
+fun reto28() {
+    println("\n--- Reto 28: Calculadora de Tarifas de Parking ---")
+    val tarifas = mapOf(1 to 1000, 2 to 1800, 3 to 2500, 4 to 3200, 5 to 4000,
+        6 to 4700, 7 to 5400, 8 to 6100, 9 to 6800, 10 to 7500)
+    val horas = 4
+    println("Tarifa por $horas horas: $${tarifas[horas] ?: "No disponible"}")
+}
