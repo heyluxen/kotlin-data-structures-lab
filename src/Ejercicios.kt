@@ -402,3 +402,23 @@ fun reto29() {
     }
     if (!encontrada) println("No se encontró pareja que sume $target")
 }
+
+fun reto30() {
+    println("\n--- Reto 30: Espejo de Layout de Tienda ---")
+    val estanterias = arrayOf(
+        intArrayOf(1, 2),
+        intArrayOf(3, 4),
+        intArrayOf(5, 6)
+    )
+    println("Original (3x2):")
+    for (fila in estanterias) println(fila.joinToString())
+
+    val transpuesta = Array(2) { IntArray(3) }
+    for (i in estanterias.indices) {
+        for (j in estanterias[i].indices) {
+            transpuesta[j][i] = estanterias[i][j]
+        }
+    }
+    println("Transpuesta (2x3):")
+    for (fila in transpuesta) println(fila.joinToString())
+}
