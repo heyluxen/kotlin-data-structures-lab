@@ -331,3 +331,22 @@ fun reto24() {
     if (balanceado && pilaBalance.isEmpty()) println("Manifiesto balanceado: $manifiesto")
     else println("Manifiesto NO balanceado: $manifiesto")
 }
+
+fun reto25() {
+    println("\n--- Reto 25: Rendimiento de Maratón ---")
+    val tiempos = mutableListOf(120.0, 115.0, 130.0, 118.0, 200.0, 122.0, 125.0)
+    val tiemposCopia = tiempos.toMutableList()
+
+    // Eliminar solo UNA ocurrencia del mínimo
+    val min = tiemposCopia.minOrNull()
+    if (min != null) tiemposCopia.remove(min)
+
+    // Eliminar solo UNA ocurrencia del máximo
+    val max = tiemposCopia.maxOrNull()
+    if (max != null) tiemposCopia.remove(max)
+
+    val promedioReal = tiemposCopia.average()
+    println("Tiempos originales: $tiempos")
+    println("Tiempos sin outliers: $tiemposCopia")
+    println("Promedio real: ${String.format("%.2f", promedioReal)}")
+}
