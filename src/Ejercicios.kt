@@ -262,3 +262,22 @@ fun reto20() {
     combinada.addAll(agenda2.subList(i2, agenda2.size))
     println("Agendas combinadas: $combinada")
 }
+
+fun reto21() {
+    println("\n--- Reto 21: Días de Mantenimiento (Pisos Primos) ---")
+    fun esPrimo(n: Int): Boolean {
+        if (n < 2) return false
+        for (i in 2..Math.sqrt(n.toDouble()).toInt()) {
+            if (n % i == 0) return false
+        }
+        return true
+    }
+
+    val pisosPrimos = mutableListOf<Int>()
+    for (piso in 1..100) {
+        if (esPrimo(piso)) pisosPrimos.add(piso)
+    }
+    val arrayFinal = pisosPrimos.toTypedArray()  // Convertir a Array
+
+    println("Pisos con mantenimiento especial (primos): ${arrayFinal.joinToString()}")
+}
