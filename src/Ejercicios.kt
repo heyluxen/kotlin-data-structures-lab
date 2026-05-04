@@ -241,3 +241,24 @@ fun reto19() {
         println("   ${i + 1}. ${apps[i].first} - ${apps[i].second} estrellas")
     }
 }
+
+fun reto20() {
+    println("\n--- Reto 20: Unión de Agendas Ordenadas ---")
+    val agenda1 = listOf("Ana", "Carlos", "Luis")
+    val agenda2 = listOf("Beatriz", "David", "Sofia")
+    val combinada = mutableListOf<String>()
+    var i1 = 0
+    var i2 = 0
+    while (i1 < agenda1.size && i2 < agenda2.size) {
+        if (agenda1[i1] < agenda2[i2]) {
+            combinada.add(agenda1[i1])
+            i1++
+        } else {
+            combinada.add(agenda2[i2])
+            i2++
+        }
+    }
+    combinada.addAll(agenda1.subList(i1, agenda1.size))
+    combinada.addAll(agenda2.subList(i2, agenda2.size))
+    println("Agendas combinadas: $combinada")
+}
