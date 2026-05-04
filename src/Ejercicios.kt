@@ -350,3 +350,20 @@ fun reto25() {
     println("Tiempos sin outliers: $tiemposCopia")
     println("Promedio real: ${String.format("%.2f", promedioReal)}")
 }
+
+fun reto26() {
+    println("\n--- Reto 26: Compresión de Logs de Servidor ---")
+    val logs = listOf("UP", "UP", "DOWN", "DOWN", "DOWN", "UP", "UP")
+    val comprimido = mutableListOf<Pair<String, Int>>()
+    var contador = 1
+    for (i in 1 until logs.size) {
+        if (logs[i] == logs[i - 1]) {
+            contador++
+        } else {
+            comprimido.add(logs[i - 1] to contador)
+            contador = 1
+        }
+    }
+    comprimido.add(logs.last() to contador)
+    println("Logs comprimidos: $comprimido")
+}
