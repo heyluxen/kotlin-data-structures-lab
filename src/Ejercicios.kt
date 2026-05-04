@@ -384,3 +384,21 @@ fun reto28() {
     val horas = 4
     println("Tarifa por $horas horas: $${tarifas[horas] ?: "No disponible"}")
 }
+
+fun reto29() {
+    println("\n--- Reto 29: Parejas de Viaje por Peso ---")
+    val maletas = listOf(15, 8, 10, 12, 5, 7)
+    val target = 20
+    var encontrada = false
+    for (i in maletas.indices) {
+        for (j in i + 1 until maletas.size) {
+            if (maletas[i] + maletas[j] == target) {
+                println("Pareja encontrada: ${maletas[i]} + ${maletas[j]} = $target")
+                encontrada = true
+                break
+            }
+        }
+        if (encontrada) break
+    }
+    if (!encontrada) println("No se encontró pareja que sume $target")
+}
