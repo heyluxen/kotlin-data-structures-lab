@@ -185,3 +185,24 @@ fun reto16() {
     sensores.removeAll { it % 3 == 0 }
     println("Sensores restantes: $sensores")
 }
+
+fun reto17() {
+    println("\n--- Reto 17: Mapa de Almacén ---")
+    val almacen = arrayOf(
+        intArrayOf(1, 2, 3, 4),
+        intArrayOf(5, 6, 7, 8),
+        intArrayOf(9, 10, 11, 12),
+        intArrayOf(13, 14, 15, 16)
+    )
+    var diagonalPrincipal = 0
+    var diagonalSecundaria = 0
+    val n = almacen.size  // en lugar de usar 3 fijo
+
+    for (i in 0 until n) {
+        diagonalPrincipal += almacen[i][i]
+        diagonalSecundaria += almacen[i][n - 1 - i]
+    }
+
+    println("Diagonal principal: $diagonalPrincipal")
+    println("Diagonal secundaria: $diagonalSecundaria")
+}
