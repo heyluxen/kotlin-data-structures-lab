@@ -216,3 +216,28 @@ fun reto18() {
     for ((ing, cant) in chef2) fusion[ing] = fusion.getOrDefault(ing, 0.0) + cant
     println("Lista de compras combinada: $fusion")
 }
+
+fun reto19() {
+    println("\n--- Reto 19: Ranking de Apps por Calificación ---")
+    val apps = mutableListOf(
+        Pair("AppA", 4.5), Pair("AppB", 3.8), Pair("AppC", 4.9), Pair("AppD", 4.2),
+        Pair("AppE", 4.0), Pair("AppF", 3.5), Pair("AppG", 4.7), Pair("AppH", 4.1),
+        Pair("AppI", 3.9), Pair("AppJ", 4.3)
+    )
+
+    // Ordenamiento manual (burbuja)
+    for (i in 0 until apps.size - 1) {
+        for (j in 0 until apps.size - 1 - i) {
+            if (apps[j].second < apps[j + 1].second) {
+                val temp = apps[j]
+                apps[j] = apps[j + 1]
+                apps[j + 1] = temp
+            }
+        }
+    }
+
+    println("Top 10 apps:")
+    for (i in 0 until apps.size) {
+        println("   ${i + 1}. ${apps[i].first} - ${apps[i].second} estrellas")
+    }
+}
