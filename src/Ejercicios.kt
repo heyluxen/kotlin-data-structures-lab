@@ -310,3 +310,24 @@ fun reto23() {
     println("Calorías: $calorias")
     println("Diferencia con promedio anterior: $diferencias")
 }
+
+fun reto24() {
+    println("\n--- Reto 24: Organización de Contenedores ---")
+    val manifiesto = "{[()]}"
+    val pilaBalance = mutableListOf<Char>()
+    var balanceado = true
+    val pares = mapOf(')' to '(', ']' to '[', '}' to '{')
+    for (c in manifiesto) {
+        when (c) {
+            '(', '[', '{' -> pilaBalance.add(c)
+            ')', ']', '}' -> {
+                if (pilaBalance.isEmpty() || pilaBalance.removeAt(pilaBalance.size - 1) != pares[c]) {
+                    balanceado = false
+                    break
+                }
+            }
+        }
+    }
+    if (balanceado && pilaBalance.isEmpty()) println("Manifiesto balanceado: $manifiesto")
+    else println("Manifiesto NO balanceado: $manifiesto")
+}
