@@ -166,3 +166,15 @@ fun reto14() {
         println("No hay IDs únicos en la lista")
     }
 }
+
+fun reto15() {
+    println("\n--- Reto 15: Calculadora de IVA Selectiva ---")
+    val precios = listOf(100000.0, 25000.0, 60000.0, 15000.0)
+
+    val preciosConIva = precios.map { precio ->
+        if (precio > 50000) precio * 1.19 else precio
+    }
+
+    println("Precios originales: $precios")
+    println("Precios con IVA selectivo: $preciosConIva")
+}
